@@ -1,0 +1,51 @@
+group 'de.kaleidox'
+version '0.00'
+
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+mainClassName = 'de.kaleidox.discomocracy.Main'
+
+wrapper {
+    gradleVersion = '5.2'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-$gradleVersion-all.zip"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+    options.incremental = true
+}
+
+repositories {
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    // Javacord
+    implementation 'org.javacord:javacord:3.0.+'
+
+    // Javacord Utilities
+    //implementation('de.kaleidox:javacord-utilities:1.0.2rev1')
+    implementation('com.github.burdoto:javacord-utilities:d4fd9b9c9e')
+            { exclude group: 'org.javacord' }
+    
+    // Javacord Dialogue
+    implementation('com.github.burdoto:javacord-dialogue:042c3caf58') { 
+        exclude group: 'org.javacord'
+        exclude group: 'de.kaleidox'
+    }
+
+    // BotList Stats
+    //implementation 'de.kaleidox:discordbotlist-stats-javacord:0.1.1'
+    implementation 'com.github.burdoto.discordbotlist-stats:discordbotlist-stats-core:e494deec0e'
+    implementation 'com.github.burdoto.discordbotlist-stats:discordbotlist-stats-javacord:e494deec0e'
+
+    // Other dependencies
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
+
+    // Runtime logger dependency
+    runtimeOnly 'org.apache.logging.log4j:log4j-core:2.11.0'
+}
