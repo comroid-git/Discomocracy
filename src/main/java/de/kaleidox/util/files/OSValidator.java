@@ -18,19 +18,4 @@ public class OSValidator {
     public static boolean isSolaris() {
         return OS.contains("sunos");
     }
-
-    public static String getOS() {
-        if (isWindows()) {
-            return "win";
-        } else if (isMac()) {
-            return "osx";
-        } else if (isUnix()) {
-            return "uni";
-        } else if (isSolaris()) {
-            return "sol";
-        } else {
-            return "err";
-        }
-    }
-
 }
