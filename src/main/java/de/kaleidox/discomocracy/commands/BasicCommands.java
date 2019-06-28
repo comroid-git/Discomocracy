@@ -205,15 +205,15 @@ public enum BasicCommands {
                                    String no) {
         requestMsg.edit(accumulateEmbed(requestMsg, embedAccumulation[0], "Input Required", question));
 
-        boolean createEmojisFromVoting = new BooleanInput(requestMsg.getChannel())
+        boolean yield = new BooleanInput(requestMsg.getChannel())
                 .withTarget(target)
                 .withTimeout(60, SECONDS)
                 .withDefaultValue(true) // assume true because bot has permission to do this already
                 .enableResponseDeletion()
                 .listenBlocking();
 
-        embedAccumulation[0] = createEmojisFromVoting ? yes : no;
-        return createEmojisFromVoting;
+        embedAccumulation[0] = yield ? yes : no;
+        return yield;
     }
 
     private EmbedBuilder accumulateEmbed(
