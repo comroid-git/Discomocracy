@@ -25,15 +25,16 @@ repositories {
 
 dependencies {
     // Javacord
-    implementation 'org.javacord:javacord:3.0.+'
+    implementation 'org.javacord:javacord-api:3.0.4'
+    implementation 'org.javacord:javacord-core:3.0.4'
 
     // Javacord Utilities
     //implementation('de.kaleidox:javacord-utilities:1.0.2rev1')
-    implementation('com.github.burdoto:javacord-utilities:d4fd9b9c9e')
+    implementation('com.github.burdoto:javacord-utilities:7476193984')
             { exclude group: 'org.javacord' }
-    
+
     // Javacord Dialogue
-    implementation('com.github.burdoto:javacord-dialogue:042c3caf58') { 
+    implementation('com.github.burdoto:javacord-dialogue:459909a9c4') {
         exclude group: 'org.javacord'
         exclude group: 'de.kaleidox'
     }
@@ -43,8 +44,13 @@ dependencies {
     implementation 'com.github.burdoto.discordbotlist-stats:discordbotlist-stats-core:e494deec0e'
     implementation 'com.github.burdoto.discordbotlist-stats:discordbotlist-stats-javacord:e494deec0e'
 
-    // Other dependencies
+    // FuzzyWuzzy
+    implementation 'com.github.burdoto.fuzzywuzzy:fuzzywuzzy-fuzzywuzzy:976ac924da'
+    implementation 'com.github.burdoto.fuzzywuzzy:fuzzywuzzy-levenshtein:976ac924da'
+
+    // Jackson
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
+    implementation 'com.fasterxml.jackson.module:jackson-module-afterburner:2.9.9'
 
     // Runtime logger dependency
     runtimeOnly 'org.apache.logging.log4j:log4j-core:2.11.0'
