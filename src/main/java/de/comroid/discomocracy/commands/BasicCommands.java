@@ -1,4 +1,4 @@
-package de.kaleidox.discomocracy.commands;
+package de.comroid.discomocracy.commands;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,9 +7,9 @@ import java.util.stream.Collectors;
 
 import de.kaleidox.javacord.dialogue.input.option.BooleanInput;
 import de.kaleidox.javacord.dialogue.input.text.TextInput;
-import de.kaleidox.javacord.util.commands.Command;
-import de.kaleidox.javacord.util.commands.CommandGroup;
-import de.kaleidox.javacord.util.ui.embed.DefaultEmbedFactory;
+import de.comroid.javacord.util.commands.Command;
+import de.comroid.javacord.util.commands.CommandGroup;
+import de.comroid.javacord.util.ui.embed.DefaultEmbedFactory;
 
 import me.xdrop.fuzzywuzzy.FuzzyWuzzy;
 import me.xdrop.fuzzywuzzy.levenshtein.Levenshtein;
@@ -26,8 +26,8 @@ import org.javacord.api.entity.user.User;
 import org.javacord.api.util.DiscordRegexPattern;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
-import static de.kaleidox.discomocracy.Main.API;
-import static de.kaleidox.discomocracy.Main.PROPERTY;
+import static de.comroid.discomocracy.Main.API;
+import static de.comroid.discomocracy.Main.PROPERTY;
 
 @CommandGroup(name = "Basic Commands", description = "All commands for basic interaction with the bot")
 public enum BasicCommands {

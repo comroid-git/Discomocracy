@@ -1,28 +1,27 @@
-package de.kaleidox.discomocracy;
+package de.comroid.discomocracy;
 
 import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import de.kaleidox.botstats.BotListSettings;
 import de.kaleidox.botstats.javacord.JavacordStatsClient;
 import de.kaleidox.botstats.model.StatsClient;
-import de.kaleidox.discomocracy.commands.AdminCommands;
-import de.kaleidox.discomocracy.commands.BasicCommands;
-import de.kaleidox.discomocracy.commands.voting.ChannelVoting;
-import de.kaleidox.discomocracy.commands.voting.EmojiVoting;
-import de.kaleidox.discomocracy.commands.voting.MemberVoting;
-import de.kaleidox.discomocracy.commands.voting.VoiceVoting;
-import de.kaleidox.javacord.util.commands.CommandHandler;
-import de.kaleidox.javacord.util.server.properties.PropertyGroup;
-import de.kaleidox.javacord.util.server.properties.ServerPropertiesManager;
-import de.kaleidox.javacord.util.ui.embed.DefaultEmbedFactory;
-import de.kaleidox.util.files.FileProvider;
-import de.kaleidox.util.files.OSValidator;
+import de.comroid.discomocracy.commands.AdminCommands;
+import de.comroid.discomocracy.commands.BasicCommands;
+import de.comroid.discomocracy.commands.voting.ChannelVoting;
+import de.comroid.discomocracy.commands.voting.EmojiVoting;
+import de.comroid.discomocracy.commands.voting.MemberVoting;
+import de.comroid.discomocracy.commands.voting.VoiceVoting;
+import de.comroid.javacord.util.commands.CommandHandler;
+import de.comroid.javacord.util.server.properties.PropertyGroup;
+import de.comroid.javacord.util.server.properties.ServerPropertiesManager;
+import de.comroid.javacord.util.ui.embed.DefaultEmbedFactory;
+import de.comroid.util.files.FileProvider;
+import de.comroid.util.files.OSValidator;
 
 import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
@@ -31,7 +30,7 @@ import org.javacord.api.entity.message.embed.EmbedBuilder;
 import org.javacord.api.entity.user.UserStatus;
 import org.javacord.api.util.logging.ExceptionLogger;
 
-import static de.kaleidox.util.files.FileProvider.getFile;
+import static de.comroid.util.files.FileProvider.getFile;
 
 public class Main {
     public final static Color THEME = new Color(0x7289da);

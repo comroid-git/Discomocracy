@@ -1,6 +1,6 @@
-package de.kaleidox.discomocracy.commands;
+package de.comroid.discomocracy.commands;
 
-import de.kaleidox.javacord.util.commands.Command;
+import de.comroid.javacord.util.commands.Command;
 
 import org.javacord.api.entity.user.User;
 

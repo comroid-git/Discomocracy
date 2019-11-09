@@ -1,7 +1,7 @@
-package de.kaleidox.discomocracy.commands.voting;
+package de.comroid.discomocracy.commands.voting;
 
-import de.kaleidox.javacord.util.commands.Command;
-import de.kaleidox.javacord.util.commands.CommandGroup;
+import de.comroid.javacord.util.commands.Command;
+import de.comroid.javacord.util.commands.CommandGroup;
 
 import org.javacord.api.entity.server.Server;
 
@@ -14,6 +14,6 @@ public enum EmojiVoting {
             description = "Creates a vote for creating an emoji!"
     )
     public Object startEmojiVote(Server srv) {
-        
+        throw new UnsupportedOperationException(); // todo
     }
 }

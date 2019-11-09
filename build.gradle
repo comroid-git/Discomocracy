@@ -1,11 +1,11 @@
-group 'de.kaleidox'
+group 'de.comroid'
 version '0.00'
 
 apply plugin: 'application'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-mainClassName = 'de.kaleidox.discomocracy.Main'
+mainClassName = 'de.comroid.discomocracy.Main'
 
 wrapper {
     gradleVersion = '5.2'
@@ -29,8 +29,7 @@ dependencies {
     implementation 'org.javacord:javacord-core:3.0.4'
 
     // Javacord Utilities
-    //implementation('de.kaleidox:javacord-utilities:1.0.2rev1')
-    implementation('com.github.burdoto:javacord-utilities:7476193984')
+    implementation('de.comroid:javacord-utilities:1.1.0')
             { exclude group: 'org.javacord' }
 
     // Javacord Dialogue
@@ -40,9 +39,7 @@ dependencies {
     }
 
     // BotList Stats
-    //implementation 'de.kaleidox:discordbotlist-stats-javacord:0.1.1'
-    implementation 'com.github.burdoto.discordbotlist-stats:discordbotlist-stats-core:e494deec0e'
-    implementation 'com.github.burdoto.discordbotlist-stats:discordbotlist-stats-javacord:e494deec0e'
+    implementation 'de.kaleidox:discordbotlist-stats-javacord:0.1.3'
 
     // FuzzyWuzzy
     implementation 'com.github.burdoto.fuzzywuzzy:fuzzywuzzy-fuzzywuzzy:976ac924da'
