@@ -1,0 +1,14 @@
+version: "2.0"
+
+services:
+    cobalton:
+        image: discomocracy:public
+        container_name: discomocracy-public
+        restart: on-failure
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - /var/bots/Discomocracy:/app/data:rw
+        working_dir: /app
+        entrypoint: /app/binaries/bin/Discomocracy
