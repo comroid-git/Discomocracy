@@ -50,7 +50,7 @@ dependencies {
     implementation 'com.github.burdoto.fuzzywuzzy:fuzzywuzzy-levenshtein:976ac924da'
 
     // Jackson
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.1'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.2'
     implementation 'com.fasterxml.jackson.module:jackson-module-afterburner:2.10.1'
 
     // Runtime logger dependency
